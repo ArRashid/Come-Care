@@ -1,0 +1,14 @@
+{
+    "pramas": {
+        "local_server":"True",
+        "local_uri": "mysql://root:@localhost/comcare",
+        "pod_uri": "mysql://user:password@localhost/dbname",
+        "brand":"ComCare.com",
+        "email": "suspenceroom@gmail.com",
+        "password": "rashid786",
+        "s_key" : "asdsad121123123sddsad",
+        "max_session_day": 10
+
+    }
+
+}

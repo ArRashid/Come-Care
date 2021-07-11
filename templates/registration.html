@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+<div class="container">
+  <center>
+    <h1 bg="blue"> Creating Your Account</h1>
+  </center>
+  <div class="mb-2">
+
+
+    <form action="/registration" method="post" novalidate>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name </label>
+        <input class="form-control" id="name" type="text" placeholder="Enter your name..." name='name'>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Address</label>
+        <textarea class="form-control" id="message" type="text" placeholder="Full Address..." style="height: 5rem"
+          data-sb-validations="required" name="address"></textarea>
+        <!--     <input class="form-control" id="name" type="text" placeholder="Enter your name..." name="address" > -->
+      </div>
+
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Pin </label>
+        <input class="form-control" id="name" type="text" placeholder="Enter your name..." name='pin'>
+      </div>
+
+
+      <div class="col-md">
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example"
+            name="dist">
+            <option selected>Open this select menu</option>
+            <option value="Alipurduar">Alipurduar</option>
+            <option value="Bankura">Bankura</option>
+            <option value="North 24 Parganas">North 24 Parganas</option>
+          </select>
+          <label for="floatingSelectGrid">Select Your Districts</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Phone number </label>
+        <input class="form-control" id="phone" type="tel" placeholder="8159030930" data-sb-validations="required"
+          name="phone">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="example@mail.com" data-sb-validations="required" name="email">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="pwd" name="pwd">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confrom - Password</label>
+        <input type="password" class="form-control" id="cpwd" name="cpwd">
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="accepted" name="box">
+        <label class="form-check-label" for="exampleCheck1">I accept <a href="/Terms"> Terms & Conditions</a></label>
+      </div>
+      <button type="submit" class="btn btn-primary">Registration</button>
+
+
+
+    </form>
+  </div>
+  <br><br><br><br>
+  <a href="/login">Return to Login Page</a>
+
+</div>
+<br>
+
+
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section class="bg-light py-5">
+<div class="container px-5 my-5 px-5">
+  <div class="row align-items-center">
+    <form action="/career" method="post" enctype="multipart/form-data" >
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Jone Kary" name="name" required />
+        <label for="floatingInput">Full Name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="file" class="form-control" id="inputGroupFile02" name="pf" enctype="multipart/form-data"  required />
+        <label for="floatingInput">Profile Picture</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <textarea class="form-control" id="message" type="text" placeholder="Describe About Self" style="height: 7rem"
+          data-sb-validations="required" name="bio"></textarea>
+        <label for="message">Describe About Self</label>
+        <div class="invalid-feedback" data-sb-feedback="message:required">Describe About Self is required.</div>
+
+
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" id="floatingInput" placeholder="9732000000" name="phone" required />
+          <label for="floatingInput">Phone Number</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="example@gmail.com" name="email"
+            required />
+          <label for="floatingInput">Email</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <textarea class="form-control" id="message" type="text" placeholder="Describe About Self" style="height: 7rem"
+            data-sb-validations="required" name="address"></textarea>
+          <label for="message">Full Address</label>
+          <div class="invalid-feedback" data-sb-feedback="message:required">Full Address</div>
+
+
+          <div class="row g-2">
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" placeholder="kolkatta" name="city">
+                <label for="floatingInputGrid">City</label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating">
+                <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example"
+                  name="dist">
+                  <option selected>Open this select menu</option>
+                  <option value="Alipurduar">Alipurduar</option>
+                  <option value="Bankura">Bankura</option>
+                  <option value="North 24 Parganas">North 24 Parganas</option>
+                </select>
+                <label for="floatingSelectGrid">Select Your Districts</label>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row g-2">
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" placeholder="700001" name="pin">
+                <label for="floatingInputGrid">Pin No</label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating">
+                <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example"
+                  name="state">
+                  <option selected>West Bengal</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Assam">Assam</option>
+                </select>
+                <label for="floatingSelectGrid">Select Your State</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="floatingInput" placeholder="1450 51212 121212" name="adharno"
+              required />
+            <label for="floatingInput">Adhar Id Number</label>
+          </div>
+
+
+          <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02" placeholder="Jone Kary" name="adharsc"
+              required />
+            <label for="floatingInput">Adhar Scan Copy</label>
+          </div>
+
+
+
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" name="field">
+              <option selected>IT Support Spesilist</option>
+              <option value="Network Engee">Network Engee</option>
+              <option value="Civil Engee">Civil Engee</option>
+              <option value="Plamber">Plamber</option>
+              <option value="crpenter">CerPenter</option>
+            </select>
+            <label for="floatingSelectGrid">I want to join as </label>
+          </div>
+
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="10th,BA,MA" name="ql" required />
+            <label for="floatingInput">My Qualification</label>
+          </div>
+
+
+
+          <div class="form-floating mb-3">
+            <input type="file" class="form-control" multiple id="inputGroupFile02" placeholder="Jone Kary" name="proof"
+              required />
+            <label for="floatingInput">Proof of Qualification</label>
+          </div>
+
+
+
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="message" type="text" placeholder="Experians Details (optional)"
+              style="height: 7rem" data-sb-validations="required" name="exp"></textarea>
+            <label for="message">Experience Details</label>
+            <div class="invalid-feedback" data-sb-feedback="message:required">Experience Details</div>
+
+
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="message" type="text"
+                placeholder="If any Request or Message ( Optional )" style="height: 7rem" data-sb-validations="required"
+                name="msg"></textarea>
+              <label for="message">If any Request or Message</label>
+              <div class="invalid-feedback" data-sb-feedback="message:required">If any Request or Message</div>
+
+
+              <br><br>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="accepted" name="box">
+                <label class="form-check-label" for="exampleCheck1">I accept <a href="/Terms"> Terms &
+                    Conditions</a></label>
+              </div>
+
+              <br><br><br><br>
+
+              <div class="d-grid"><button class="btn btn-primary btn-lg " id="submitButton"
+                  type="submit">Submit</button>
+              </div>
+
+              <br><br><br><br><br><br>
+
+    </form>
+
+  </div>
+
+</div>
+ </section>
+{% endblock %}
